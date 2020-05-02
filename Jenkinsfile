@@ -9,7 +9,8 @@ pipeline {
                 sh '''
                    cd /home/ubuntu/
                    pwd
-                   ansible node -m ping  
+                   ansible node -m ping
+                   cd /home/ubuntu/playbook/	  
                    ansible-playbook deploy.yaml
                 '''
             }
